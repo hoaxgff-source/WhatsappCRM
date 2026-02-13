@@ -1,0 +1,14 @@
+{
+  "name": "whatsapp-crm-saas",
+  "private": true,
+  "workspaces": ["apps/api", "apps/web"],
+  "scripts": {
+    "dev:api": "npm --workspace apps/api run dev",
+    "dev:web": "npm --workspace apps/web run dev",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
+    "start": "concurrently \"npm --workspace apps/api run start\" \"npm --workspace apps/web run start\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
